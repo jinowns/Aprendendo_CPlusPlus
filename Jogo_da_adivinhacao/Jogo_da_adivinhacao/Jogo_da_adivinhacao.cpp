@@ -10,7 +10,12 @@ int main()
 	cout << "Modo Facil(1) || Modo Medio(2) || Modo Dificil (3)" << endl;
 	int modo;
 	int tentativas;
-	bool acabou = tentativas = 0;
+	bool acabou;
+	bool acertou;
+	double pontos = 1000;
+	double pontos_perdidos = 0;
+	const int NUMERO_SECRETO = 100;//const é um tipo de variavel que nunca muda seu valor ao longo do tempo da execusão do programa
+
 	cin >> modo;//cin faz a leitura igual o scanf ou leia.
 	switch (modo)
 	{
@@ -25,25 +30,25 @@ int main()
 			break;
 		default:
 			cout << "Modo Indefinido" << endl;
-			cout << "Fim de Jogo" << endl;
+			cout << "Você tem apenas uma tentativa !" << endl;
+			tentativas = 1;
 	}
-
-	const int NUMERO_SECRETO = 6425;//const é um tipo de variavel que nunca muda seu valor ao longo do tempo da execusão do programa
 
 	do
 	{
 		int chute = 0;
-
-
+		bool maior = chute > NUMERO_SECRETO;
+		cout << "Tentativas Restantes " << tentativas << endl;
 		cout << "Chuta um numero: " << endl;
 		cin >> chute;//escaniando uma variavel
-
-		bool acertou = chute == NUMERO_SECRETO; // variavel do tipo bool é de booleano, criando ela em uma linha já é feito um "if"
-		bool maior = chute > NUMERO_SECRETO;
+		acertou = chute == NUMERO_SECRETO; // variavel do tipo bool é de booleano, criando ela dessa forma fica mais facil se ler o "IF"
+		pontos_perdidos = abs (pontos - chute) / 2.0;
+		pontos -= pontos_perdidos;
 		
 		if (acertou)
 		{
 			cout << "Parabéns você acertou o Número secreto !!" << endl;
+			cout << "Sua Pontuação" << pontos << endl;
 		}
 		else if (maior)
 		{
@@ -53,9 +58,9 @@ int main()
 		{
 			cout << "Seu Chute foi Menor" << endl;
 		}
-		//tentativas--;
-	} while (acabou);
+		tentativas--;
+		acabou = tentativas == 0;
+	} while (!acabou || acertou);
 	
 
-	
 }
