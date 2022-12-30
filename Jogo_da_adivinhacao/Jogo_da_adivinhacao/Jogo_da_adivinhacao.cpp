@@ -7,7 +7,6 @@ int main()
 	cout << "*  Bem-Vindo ao jogo da adivinhacao  *" << endl;
 	cout << "**************************************" << endl;
 	
-	cout << "Modo Facil(1) || Modo Medio(2) || Modo Dificil (3)" << endl;
 	int modo;
 	int tentativas;
 	bool acabou;
@@ -16,6 +15,7 @@ int main()
 	double pontos_perdidos = 0;
 	const int NUMERO_SECRETO = 100;//const é um tipo de variavel que nunca muda seu valor ao longo do tempo da execusão do programa
 
+	cout << "Modo Facil(1) || Modo Medio(2) || Modo Dificil (3)" << endl;
 	cin >> modo;//cin faz a leitura igual o scanf ou leia.
 	switch (modo)
 	{
@@ -42,13 +42,13 @@ int main()
 		cout << "Chuta um numero: " << endl;
 		cin >> chute;//escaniando uma variavel
 		acertou = chute == NUMERO_SECRETO; // variavel do tipo bool é de booleano, criando ela dessa forma fica mais facil se ler o "IF"
-		pontos_perdidos = abs (pontos - chute) / 2.0;
-		pontos -= pontos_perdidos;
 		
 		if (acertou)
 		{
-			cout << "Parabéns você acertou o Número secreto !!" << endl;
-			cout << "Sua Pontuação" << pontos << endl;
+			cout << "Parabens você acertou o Numero secreto !!" << endl;
+			cout.precision(2);//precision server para dizer quantas casa eu quero para formatar para exibir um numero double
+			cout << fixed;//usado para a exibição dos numeros não sair em notacao cientifica
+			cout << "Sua Pontuacao " << pontos << endl;
 		}
 		else if (maior)
 		{
@@ -58,6 +58,13 @@ int main()
 		{
 			cout << "Seu Chute foi Menor" << endl;
 		}
+
+		if (!acertou)
+		{
+			pontos_perdidos = abs(chute -pontos) / 2.0;
+			pontos -= pontos_perdidos;
+		}
+		
 		tentativas--;
 		acabou = tentativas == 0;
 	} while (!acabou || acertou);
