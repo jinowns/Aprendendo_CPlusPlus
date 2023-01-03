@@ -1,2 +1,3 @@
 ﻿  Jogo_da_adivinhacao.cpp
+C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Jogo_da_adivinhacao\Jogo_da_adivinhacao\Jogo_da_adivinhacao.cpp(17,12): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
   Jogo_da_adivinhacao.vcxproj -> C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Jogo_da_adivinhacao\x64\Debug\Jogo_da_adivinhacao.exe
