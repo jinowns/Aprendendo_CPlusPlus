@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="Jogo_da_Forca.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="banco_palavras.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

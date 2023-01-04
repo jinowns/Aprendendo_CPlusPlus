@@ -2,6 +2,7 @@
 #include <string> // biblioteca de string
 #include <map>
 #include <vector>
+#include <fstream> //biblioteca de arquivos
 using namespace std;
 
 const string PALAVRA_SECRETA = "TESTE";
@@ -30,48 +31,113 @@ bool letra_existe(char chute)
 	return false;*/
 }
 
+bool nao_acertou()
+{
+	for (char letra : PALAVRA_SECRETA)
+	{
+		if (!chutou[letra])
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool nao_enforcou()
+{
+	return chutes_errados.size() < 5;//.size está retornando o tamanho do valor 
+}
+
+void imprime_cabecalho()
+{
+	cout << "*********************" << endl;
+	cout << "*** Jogo da Forca ***" << endl;
+	cout << "*********************" << endl;
+	cout << endl;
+}
+
+void imprime_erros()
+{
+	std::cout << "Chutes Errados: ";
+	for (char letra : chutes_errados)
+	{
+		std::cout << letra << " ";
+	}
+	std::cout << endl;
+}
+
+void imprime_palavra()
+{
+	for (char letra : PALAVRA_SECRETA)
+	{
+		if (chutou[letra])
+		{
+			std::cout << letra << "";
+		}
+		else
+		{
+			std::cout << "_ ";
+		}
+	}
+	std::cout << endl;
+}
+
+void chuta()
+{
+	char chute;
+	std::cin >> chute;
+	chutou[chute] = true;
+
+	if (letra_existe(chute))
+	{
+		std::cout << "Você acertou! Seu chute esta na palavra." << endl;
+	}
+	else
+	{
+		std::cout << "Você errou! Seu chute nao esta na palavra." << endl;
+		chutes_errados.push_back(chute);//push_back joga para a utima posicao do vetor
+	}
+}
+
+void le_arquivo()
+{
+	ifstream arquivo;
+	arquivo.open("./bancos_palavras.txt");
+
+	int quantidade_palavras;
+	arquivo >> quantidade_palavras;
+
+	cout << "O arquivo possui " << quantidade_palavras << " palavras." << endl;
+
+	for (int i=0; i < quantidade_palavras; i++)
+	{
+		string palavra_lida;
+		arquivo >> palavra_lida;
+		cout << "Na linha " << i << " : " << endl;
+	}
+}
+
 int main() 
 {
-	cout << PALAVRA_SECRETA << endl;
-
-	bool nao_acertou = true;
-	bool nao_enforcou = true;
-
+	imprime_cabecalho();
 	
-	while (nao_acertou && nao_enforcou) 
+	while (nao_acertou() && nao_enforcou())
 	{
-		cout << "Chutes Errados: ";
-		for (char letra : chutes_errados)
-		{
-			cout << letra << " ";
-		}
-		cout << endl;
+		imprime_erros();
 
-		for(char letra : PALAVRA_SECRETA)
-		{ 
-			if (chutou[letra])
-			{
-				cout << letra << "";
-			}
-			else
-			{
-				cout << "_ ";
-			}
-		}
-		cout << endl;
+		imprime_palavra();
 
-		char chute;
-		cin >> chute;
-		chutou[chute] = true;
+		chuta();		
+	}
 
-		if (letra_existe(chute)) 
-		{
-			cout << "Você acertou! Seu chute esta na palavra." << endl;
-		}
-		else 
-		{
-			cout << "Você errou! Seu chute nao esta na palavra." << endl;
-			chutes_errados.push_back(chute);//push_back joga para a utima posicao do vetor
-		}
+	cout << "Fim de jogo!" << endl;
+	cout << "A palavra secreta era: " << PALAVRA_SECRETA << endl;
+	if (nao_acertou()) 
+	{
+		cout << "Você perdeu! Tente novamente!" << endl;
+	}
+	else 
+	{
+		cout << "Parabéns! Você acertou a palavra secreta!" << endl;
 	}
 }
