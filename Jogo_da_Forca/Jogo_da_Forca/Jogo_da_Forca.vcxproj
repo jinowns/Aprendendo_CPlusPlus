@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="imprime_cabecalho.cpp" />
+    <ClCompile Include="imprime_erros.cpp" />
+    <ClCompile Include="imprime_palavra.cpp" />
     <ClCompile Include="Jogo_da_Forca.cpp" />
+    <ClCompile Include="letra_existe.cpp" />
+    <ClCompile Include="nao_acertou.cpp" />
+    <ClCompile Include="nao_enforcou.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="banco_palavras.txt" />
