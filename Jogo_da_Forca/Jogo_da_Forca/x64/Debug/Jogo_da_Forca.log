@@ -1,3 +1,2 @@
-﻿  Jogo_da_Forca.cpp
-C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Jogo_da_Forca\Jogo_da_Forca\Jogo_da_Forca.cpp(119,15): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
-  Jogo_da_Forca.vcxproj -> C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Jogo_da_Forca\x64\Debug\Jogo_da_Forca.exe
+﻿  letra_existe.cpp
+  Jogo_da_Forca.vcxproj -> C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Jogo_da_Forca\x64\Debug\Jogo_da_Forca.exe
