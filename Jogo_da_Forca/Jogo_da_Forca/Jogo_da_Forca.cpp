@@ -1,9 +1,6 @@
 ﻿#include <iostream>
 #include <string> // biblioteca de string
 #include <map>
-#include <vector>
-#include <fstream> //biblioteca de arquivos
-#include <ctime>
 #include <cstdlib>
 #include "adiciona_palavra.hpp"
 #include "chuta.hpp"
