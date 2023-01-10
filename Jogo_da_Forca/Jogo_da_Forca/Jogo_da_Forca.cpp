@@ -1,7 +1,6 @@
 ﻿#include <iostream>
 #include <string> // biblioteca de string
 #include <map>
-#include <cstdlib>
 #include "adiciona_palavra.hpp"
 #include "chuta.hpp"
 #include "imprime_cabecalho.hpp"
@@ -10,7 +9,6 @@
 #include "le_arquivo.hpp"
 #include "letra_existe.hpp"
 #include "nao_acertou.hpp"
-#include "nao_enforcou.hpp"
 #include "salva_arquivo.hpp"
 #include "sorteia_palavra.hpp"
 
@@ -22,10 +20,9 @@ int main()
 {
     imprime_cabecalho();
 
-    le_arquivo();
-    sorteia_palavra();
+    palavra_secreta = sorteia_palavra();
 
-    while (nao_acertou() && nao_enforcou()) {
+    while (nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5) {
         imprime_erros();
 
         imprime_palavra();
@@ -35,7 +32,7 @@ int main()
 
     std :: cout << "Fim de jogo!" << std :: endl;
     std :: cout << "A palavra secreta era: " << palavra_secreta << std :: endl;
-    if (nao_acertou()) 
+    if (nao_acertou(palavra_secreta, chutou))
     {
         std :: cout << "Você perdeu! Tente novamente!" << std :: endl;
     }
