@@ -1,9 +1,9 @@
 ﻿#include <iostream>
-#include <vector>
+#include "imprime_erros.hpp"
 
-extern std :: vector <char> chutes_errados;//Vector é um vetor com tamanho dinamico conforme é aloca um uma nova informacao
 
-void imprime_erros() 
+
+void imprime_erros(const std::vector<char> &chutes_errados)
 {
    std :: cout << "Chutes errados: ";
     for (char letra : chutes_errados) 

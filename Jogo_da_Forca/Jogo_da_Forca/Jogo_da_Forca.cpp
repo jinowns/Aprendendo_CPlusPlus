@@ -14,7 +14,7 @@
 
 std :: string palavra_secreta;
 std :: map<char, bool> chutou;
-std :: vector<char> chutes_errados;//Vector é um vetor com tamanho dinamico conforme é alocaum uma nova informacao
+std :: vector<char> chutes_errados;//Vector é um vetor com tamanho dinamico conforme é aloca um uma nova informacao
 
 int main() 
 {
@@ -23,11 +23,9 @@ int main()
     palavra_secreta = sorteia_palavra();
 
     while (nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5) {
-        imprime_erros();
-
-        imprime_palavra();
-
-        chuta();
+        imprime_erros(chutes_errados);
+        imprime_palavra(palavra_secreta, chutou);
+        chuta(chutou, chutes_errados);
     }
 
     std :: cout << "Fim de jogo!" << std :: endl;
@@ -39,7 +37,6 @@ int main()
     else 
     {
         std :: cout << "Parabéns! Você acertou a palavra secreta!" << std :: endl;
-
         std :: cout << "Você deseja adicionar uma nova palavra ao banco? (S/N) ";
         char resposta;
         std :: cin >> resposta;
