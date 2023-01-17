@@ -12,9 +12,10 @@
 #include "salva_arquivo.hpp"
 #include "sorteia_palavra.hpp"
 
-std :: string palavra_secreta;
-std :: map<char, bool> chutou;
-std :: vector<char> chutes_errados;//Vector é um vetor com tamanho dinamico conforme é aloca um uma nova informacao
+//Static é a Função faz static faz com minha variavel fique presa apenas nessa "arquivo", não deixa outras funções externa pegarem a variavel e manipularem.
+static std :: string palavra_secreta;
+static std :: map<char, bool> chutou;
+static std :: vector<char> chutes_errados;//Vector é um vetor com tamanho dinamico conforme é aloca um uma nova informacao
 
 int main() 
 {
@@ -25,7 +26,7 @@ int main()
     while (nao_acertou(palavra_secreta, chutou) && chutes_errados.size() < 5) {
         imprime_erros(chutes_errados);
         imprime_palavra(palavra_secreta, chutou);
-        chuta(chutou, chutes_errados);
+        chuta(chutou, chutes_errados, palavra_secreta);
     }
 
     std :: cout << "Fim de jogo!" << std :: endl;
