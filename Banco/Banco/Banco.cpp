@@ -1,52 +1,18 @@
 #include <iostream>
 #include <string>
+#include "Conta.hpp"
 
 using namespace std;
 
-struct Conta
-{
-	string numeroConta;
-	string cpf;
-	string nomeTitular;
-	float saldo;
-
-	void sacar(float valorASacar)
-	{
-		if (valorASacar <= 0)
-		{
-			cout << "Valor Invalido" << endl;
-			return;
-		}
-		if (valorASacar > saldo)
-		{
-			cout << "Saldo Insuficiente" << endl;
-			return;
-		}
-
-		saldo -= valorASacar;
-	}
-
-	void depositar(float valorADepositar)
-	{
-		if (valorADepositar <= 0)
-		{
-			cout << "Valor Invalido" << endl;
-			return;
-		}
-		saldo += valorADepositar;
-	}
-};
-
 int main()
 {
-	Conta conta1;
-	conta1.numeroConta = "6425";
-	conta1.cpf = "666.666.666-66";
-	conta1.nomeTitular = "Adriel Silvestrini";
-	conta1.saldo = 100;
+	Conta conta1 ("12345", "Adriel", "123.456.789 - 10");
+	conta1.depositar(500);
+	conta1.sacar(400);
 
-	conta1.sacar(100);
-	conta1.depositar(1000);
+	conta1.retornaSaldo();
 
-	cout << conta1.saldo << endl;
+	cout << "Saldo Disponivel: " << conta1.retornaSaldo() << endl;
+
+	return 0;
 }
