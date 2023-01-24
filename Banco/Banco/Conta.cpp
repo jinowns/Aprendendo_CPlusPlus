@@ -1,14 +1,17 @@
 #include "Conta.hpp"
 #include <iostream>
 
-Conta::Conta(std::string numeroConta, std::string nomeTitular, std::string cpf)
-	:numeroConta(numeroConta), 
-	nomeTitular(nomeTitular), 
-	cpf(cpf), 
-	saldo(0) //contruindo o objeto
+int Conta::contConta = 0;//inicializado id com 0
+
+//Contrutor do objeto
+Conta::Conta(std::string numeroConta,Titular titular)
+   :numeroConta(numeroConta), 
+	titular(titular),
+	saldo(0)
 {
+	contConta++;
 }
-//poderia ser igual a baixo o metodo do construtor
+//poderia ser igual a baixo o metodo do construtor, porem isso ia fazer uma copia de variavel
 /*Conta::Conta(std::string numeroConta, std::string nomeTitular, std::string cpf)
 {
 	this->numeroConta = numeroConta;
@@ -16,6 +19,12 @@ Conta::Conta(std::string numeroConta, std::string nomeTitular, std::string cpf)
 	this->cpf = cpf;
 	this->saldo = 0;
 }*/
+
+//Destrutor do objeto
+Conta::~Conta()//~ para destruir o objeto
+{
+	contConta--;
+}
 
 void Conta::sacar(float valorASacar)
 {
@@ -43,7 +52,14 @@ void Conta::depositar(float valorADepositar)
 	saldo += valorADepositar;
 }
 
+
+//get e set
 float Conta::retornaSaldo() const
 {
 	return this->saldo;
+}
+
+int Conta::retornaContConta()
+{
+	return Conta::contConta;
 }
