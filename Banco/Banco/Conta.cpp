@@ -52,7 +52,6 @@ void Conta::depositar(float valorADepositar)
 	saldo += valorADepositar;
 }
 
-
 //get e set
 float Conta::retornaSaldo() const
 {

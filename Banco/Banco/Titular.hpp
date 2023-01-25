@@ -1,16 +1,14 @@
 #pragma once
 #include <string>
+#include "Cpf.hpp"
 
 class Titular
 {
 public:
-	Titular(std::string cpf, std::string nome);
-	std::string retornaNome();
-	std::string retornaCpf();
+	Titular(std::string nome, Cpf cpf);
 private:
+	Cpf cpf;
 	std::string nome;
-	std::string cpf;
 	void nomeValido();
-	void cpfValido();
 };
 
