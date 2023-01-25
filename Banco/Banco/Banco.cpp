@@ -3,13 +3,14 @@
 #include "Conta.hpp"
 #include "Titular.hpp"
 #include "Cpf.hpp"
+#include "Pessoa.hpp"
 
 using namespace std;
 
 int main()
 {
 	Cpf cpf1("123.456.789-10");
-	Titular titular1 ("Ael", cpf1);
+	Pessoa pessoa1 ("Ael", cpf1);
 	Conta conta1 ("12345", titular1);
 
 	Cpf cpf2("109.876.543-21");
