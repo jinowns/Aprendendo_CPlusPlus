@@ -1,7 +1,7 @@
 #include "Titular.hpp"
 
-Titular::Titular(Pessoa pessoa)
-	:Pessoa(pessoa)
+Titular::Titular(std::string nome, Cpf cpf):
+	Pessoa(nome, cpf)
 {
 	
 }

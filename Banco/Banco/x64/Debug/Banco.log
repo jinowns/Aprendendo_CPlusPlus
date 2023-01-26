@@ -1,13 +1,2 @@
 ﻿  Banco.cpp
-C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(12,19): error C2661: 'Titular::Titular': nenhuma função sobrecarregada recebe 2 argumentos
-C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(12,19): message : ao tentar corresponder a lista de argumentos '(const char [4], Cpf)'
-C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(16,19): error C2661: 'Titular::Titular': nenhuma função sobrecarregada recebe 2 argumentos
-C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(16,19): message : ao tentar corresponder a lista de argumentos '(const char [6], Cpf)'
-C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(20,19): error C2661: 'Titular::Titular': nenhuma função sobrecarregada recebe 2 argumentos
-C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(20,19): message : ao tentar corresponder a lista de argumentos '(const char [6], Cpf)'
-  Conta.cpp
-  Cpf.cpp
-  Funcionario.cpp
-  Pessoa.cpp
-  Titular.cpp
-  Gerando Código...
+  Banco.vcxproj -> C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\x64\Debug\Banco.exe

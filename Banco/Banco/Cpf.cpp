@@ -1,8 +1,8 @@
 #include "Cpf.hpp"
 #include <iostream>
 
-Cpf::Cpf(std::string cpf)
-	:cpf(cpf)
+Cpf::Cpf(std::string cpf):
+	cpf(cpf)
 {
 	cpfValido();
 }

@@ -10,7 +10,7 @@ using namespace std;
 int main()
 {
 	Cpf cpf1("123.456.789-10");
-	Pessoa pessoa1 ("Ael", cpf1);
+	Titular titular1 ("Adriel", cpf1);
 	Conta conta1 ("12345", titular1);
 
 	Cpf cpf2("109.876.543-21");

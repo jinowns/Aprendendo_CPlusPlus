@@ -12,4 +12,3 @@ protected:
 private:
 	void nomeValido();
 };
-

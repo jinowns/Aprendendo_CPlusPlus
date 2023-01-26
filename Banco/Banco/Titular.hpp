@@ -1,11 +1,10 @@
 #pragma once
 #include "Pessoa.hpp"
 
-class Titular : private Pessoa
+class Titular : public Pessoa
 {
 public:
-
-	Titular(Pessoa pessoa);
+	Titular(std::string nome, Cpf cpf);
 private:
 	
 };
