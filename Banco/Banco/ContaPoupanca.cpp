@@ -1,9 +1,8 @@
 #include "ContaPoupanca.hpp"
 #include <iostream>
 
-ContaPoupanca::ContaPoupanca(Conta conta) :
-	Conta(conta),
-	saldo(0)
+ContaPoupanca::ContaPoupanca(std::string numero, Titular titular) :
+	Conta(numero, titular)
 {
 
 }

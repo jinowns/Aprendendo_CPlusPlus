@@ -12,7 +12,7 @@ protected:
 public:
 	//Conta() = delete;removendo contrutor padrao
 	Conta(std:: string numeroConta, Titular titular);
-	~Conta();
+	virtual ~Conta();
 	virtual void sacar(float valorASacar);
 	void depositar(float valorADepositar);
 	float retornaSaldo() const;
