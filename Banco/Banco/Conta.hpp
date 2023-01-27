@@ -4,7 +4,7 @@
 
 class Conta
 {
-private:	
+protected:
 	std::string numeroConta;
 	Titular titular;
 	float saldo;
@@ -13,7 +13,7 @@ public:
 	//Conta() = delete;removendo contrutor padrao
 	Conta(std:: string numeroConta, Titular titular);
 	~Conta();
-	void sacar(float valorASacar);
+	virtual void sacar(float valorASacar);
 	void depositar(float valorADepositar);
 	float retornaSaldo() const;
 	static int retornaContConta();

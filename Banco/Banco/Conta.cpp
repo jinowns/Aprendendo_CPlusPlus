@@ -33,7 +33,11 @@ void Conta::sacar(float valorASacar)
 		std::cout << "Valor Invalido" << std::endl;
 		return;
 	}
-	if (valorASacar > saldo)
+
+	float tarifaDeSaque = valorASacar * 0.03;
+	float valorDoSaque = valorDoSaque + tarifaDeSaque;
+
+	if (valorDoSaque > saldo)
 	{
 		std::cout << "Saldo Insuficiente" << std::endl;
 		return;
