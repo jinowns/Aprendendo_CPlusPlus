@@ -8,7 +8,7 @@ protected:
 	Cpf cpf;
 	std::string nome;
 
-	Pessoa(std:: string nome, Cpf cpf);
+	Pessoa(Cpf cpf, std::string nome);
 private:
 	void nomeValido();
 };

@@ -1,31 +1,15 @@
 ﻿  Banco.cpp
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(14,8): error C2259: 'Conta': não é possível instanciar a classe abstrata
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Conta.hpp(5,7): message : consulte a declaração de 'Conta'
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(14,8): message : devido aos seguintes membros:
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(14,8): message : 'float Conta::taxaDeSaque(void) const': é abstrato
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Conta.hpp(22,16): message : consulte a declaração de 'Conta::taxaDeSaque'
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(14,15): error C2259: 'Conta': não é possível instanciar a classe abstrata
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Conta.hpp(5,7): message : consulte a declaração de 'Conta'
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(14,15): message : devido aos seguintes membros:
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(14,15): message : 'float Conta::taxaDeSaque(void) const': é abstrato
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Conta.hpp(22,16): message : consulte a declaração de 'Conta::taxaDeSaque'
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(18,8): error C2259: 'Conta': não é possível instanciar a classe abstrata
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Conta.hpp(5,7): message : consulte a declaração de 'Conta'
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(18,8): message : devido aos seguintes membros:
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(18,8): message : 'float Conta::taxaDeSaque(void) const': é abstrato
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Conta.hpp(22,16): message : consulte a declaração de 'Conta::taxaDeSaque'
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(22,8): error C2259: 'Conta': não é possível instanciar a classe abstrata
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Conta.hpp(5,7): message : consulte a declaração de 'Conta'
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(22,8): message : devido aos seguintes membros:
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Banco.cpp(22,8): message : 'float Conta::taxaDeSaque(void) const': é abstrato
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Conta.hpp(22,16): message : consulte a declaração de 'Conta::taxaDeSaque'
+  Caixa.cpp
   Conta.cpp
   ContaCorrente.cpp
   ContaPoupanca.cpp
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\ContaPoupanca.cpp(13,13): warning C4305: 'return': truncamento de 'double' para 'float'
+C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\ContaPoupanca.cpp(13,13): warning C4305: 'return': truncamento de 'double' para 'float'
   Cpf.cpp
   Funcionario.cpp
+  Gerente.cpp
+C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Gerente.cpp(11,27): warning C4244: 'return': conversão de 'double' para 'float', possível perda de dados
   Pessoa.cpp
   Titular.cpp
   Gerando Código...
-C:\Users\Braum\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Conta.cpp(39): error C4700: variável local não inicializada 'valorDoSaque' usada
+C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Conta.cpp(39): error C4700: variável local não inicializada 'valorDoSaque' usada
+C:\Users\Adriel\Documents\GitHub\Aprendendo_C_Plus_Plus\Banco\Banco\Caixa.cpp(11): error C4716: 'Caixa::bonificacao': deve retornar um valor

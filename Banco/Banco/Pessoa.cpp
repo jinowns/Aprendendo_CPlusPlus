@@ -1,9 +1,9 @@
 #include "Pessoa.hpp"
 #include <iostream>
 
-Pessoa::Pessoa(std::string nome, Cpf cpf):
-	nome(nome),
-	cpf(cpf)
+Pessoa::Pessoa(Cpf cpf, std::string nome):
+	cpf(cpf),
+	nome(nome)
 {
 	nomeValido();
 }

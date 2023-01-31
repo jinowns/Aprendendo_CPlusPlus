@@ -4,7 +4,7 @@
 class Titular : public Pessoa
 {
 public:
-	Titular(std::string nome, Cpf cpf);
+	Titular(Cpf cpf, std::string nome);
 private:
 	
 };

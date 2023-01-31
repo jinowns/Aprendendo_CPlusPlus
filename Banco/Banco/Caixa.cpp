@@ -7,5 +7,5 @@ Caixa::Caixa(Cpf cpf, std::string nome, float salario) :
 }
 float Caixa::bonificacao() const 
 {
-	
+	recuperaSalario() * 0.1;
 }

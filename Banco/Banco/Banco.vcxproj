@@ -134,6 +134,7 @@
     <ClCompile Include="ContaPoupanca.cpp" />
     <ClCompile Include="Cpf.cpp" />
     <ClCompile Include="Funcionario.cpp" />
+    <ClCompile Include="Gerente.cpp" />
     <ClCompile Include="Pessoa.cpp" />
     <ClCompile Include="Titular.cpp" />
   </ItemGroup>
@@ -144,6 +145,7 @@
     <ClInclude Include="ContaPoupanca.hpp" />
     <ClInclude Include="Cpf.hpp" />
     <ClInclude Include="Funcionario.hpp" />
+    <ClInclude Include="Gerente.hpp" />
     <ClInclude Include="Pessoa.hpp" />
     <ClInclude Include="Titular.hpp" />
   </ItemGroup>
