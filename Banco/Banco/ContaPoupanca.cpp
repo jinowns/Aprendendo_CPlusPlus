@@ -6,22 +6,9 @@ ContaPoupanca::ContaPoupanca(std::string numero, Titular titular) :
 {
 
 }
-void sacar(float valorASacar)
+float ContaPoupanca::taxaDeSaque() const
 {
-	if (valorASacar <= 0)
-	{
-		std::cout << "Valor Invalido" << std::endl;
-		return;
-	}
+	std::cout << "Chamando método sacar da conta poupança" << std::endl;
 
-	float tarifaDeSaque = valorASacar * 0.03;
-	float valorDoSaque = valorDoSaque + tarifaDeSaque;
-
-	if (valorDoSaque > saldo)
-	{
-		std::cout << "Saldo Insuficiente" << std::endl;
-		return;
-	}
-
-	saldo -= valorASacar;
+	return 0.03;
 }

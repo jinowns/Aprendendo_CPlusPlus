@@ -5,9 +5,6 @@ class ContaPoupanca final : public Conta
 {
 public:
 	ContaPoupanca(std:: string numero, Titular titular);
-	void sacar(float valorASacar);
-
-private:
-	float saldo;
+	float taxaDeSaque() const override;
 };
 

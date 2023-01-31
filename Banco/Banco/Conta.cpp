@@ -23,6 +23,7 @@ Conta::Conta(std::string numeroConta,Titular titular)
 //Destrutor do objeto
 Conta::~Conta()//~ para destruir o objeto
 {
+	std::cout << "Destrutor da conta" << std::endl;
 	contConta--;
 }
 
@@ -34,7 +35,7 @@ void Conta::sacar(float valorASacar)
 		return;
 	}
 
-	float tarifaDeSaque = valorASacar * 0.03;
+	float tarifaDeSaque = valorASacar * taxaDeSaque();
 	float valorDoSaque = valorDoSaque + tarifaDeSaque;
 
 	if (valorDoSaque > saldo)
@@ -59,7 +60,7 @@ void Conta::depositar(float valorADepositar)
 //get e set
 float Conta::retornaSaldo() const
 {
-	return this->saldo;
+	return saldo;
 }
 
 int Conta::retornaContConta()

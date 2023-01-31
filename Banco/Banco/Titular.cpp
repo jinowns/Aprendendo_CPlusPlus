@@ -5,5 +5,3 @@ Titular::Titular(std::string nome, Cpf cpf):
 {
 	
 }
-
-
